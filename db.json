@@ -1,0 +1,14 @@
+{
+    "all": [
+        {
+            "id": 1,
+            "title": "korea",
+            "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
+        },
+        {
+            "id": 2,
+            "title": "japan",
+            "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
+        }
+    ]
+}
