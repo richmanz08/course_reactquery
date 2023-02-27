@@ -4,13 +4,13 @@ import { QueryClientProvider, QueryClient } from 'react-query'
 import { ExampleQuery } from './comonents/example';
 import { HomePage } from './home';
 
-// It is necessary to control the operation of the query client on the app
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false
+      refetchOnWindowFocus: false,
+      staleTime: Infinity,
     }
-  }
+  },
 })
 
 function App() {

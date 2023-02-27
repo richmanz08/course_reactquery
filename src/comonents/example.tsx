@@ -1,10 +1,31 @@
-import { useFetchdata } from '../api/services/example';
+
+import { useState } from 'react';
+import { useAdddata, useFetchdataById, useFetchdata } from '../api/services/example';
 import '../App.css';
 import { allDataType } from '../interfaces/dataInterface';
 
 export const ExampleQuery = () => {
 
+
     const { data, isLoading } = useFetchdata()
+    const { mutateAsync: mutateAsyncAddDataList } = useAdddata()
+    // const [page, setPage] = useState(1)
+    // const { data, isLoading, isFetching } = useFetchdataById(page)
+    // console.log(page, isLoading, isFetching)
+
+    const addItems = async () => {
+        const params: allDataType = {
+            id: data.length + 1,
+            image_url: 'asdsa',
+            title: 'asd'
+        }
+        // const response1 = mutateAddDataList(params)
+        // console.log('mutate', response1)
+        const response = await mutateAsyncAddDataList(params)
+        console.log('mutate', response)
+
+
+    }
 
 
     const loading = <h4>Loading</h4>
@@ -14,11 +35,25 @@ export const ExampleQuery = () => {
             <img style={{ width: 100 }} src={item.image_url} alt='empty' />
         </div>)
     })
-
+    // default
     return <div className="App">
         <header className="App-header">
+
+            <button onClick={() => addItems()}>add</button>
             <h1>Example </h1>
             {!isLoading ? showData : loading}
         </header>
     </div>
+
+    // for test pagination query
+    // return <div className="App">
+
+    //     <header className="App-header">
+    //         <h1>Example </h1>
+    //         <button onClick={() => setPage(page - 1)}>back pagination</button>
+    //         <button onClick={() => setPage(page + 1)}>Next pagination</button>
+    //         {!isFetching ? showData : loading}
+    //     </header>
+    // </div>
+
 }

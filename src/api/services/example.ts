@@ -1,20 +1,34 @@
-import { useQuery } from 'react-query';
+import { useQueryClient, useMutation, useQuery } from 'react-query';
 import { allDataType } from '../../interfaces/dataInterface';
 import { clientAPI } from "../axios"
 
+
 export const useFetchdata = () => {
-    const data = useQuery(['all'], async () => {
+    const method = useQuery(['all'], async () => {
         const res = await clientAPI.get('all');
         return res.data;
-    }, {
-        enabled: false
     })
-    return data
+    return method
 }
 export const useFetchdataById = (id: number) => {
-    const data = useQuery<allDataType[]>(['getbyid', id], async () => {
+    const method = useQuery(['getbyid', id], async () => {
         const res = await clientAPI.get(`all?id=${id}`);
         return res.data;
+    }, {
+        keepPreviousData: true,
+
     })
-    return data
+    return method
+}
+
+export const useAdddata = () => {
+    const queryClient = useQueryClient();
+    const method = useMutation(['add-data'], async (params: allDataType) => {
+        const post = await clientAPI.post('all', params)
+        return post
+    }, {
+        onSuccess: async () => { await queryClient.invalidateQueries(['all']) }
+    })
+    return method
+
 }
