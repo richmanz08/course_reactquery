@@ -3,6 +3,8 @@ import './App.css';
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ExampleQuery } from './comonents/example';
 import { HomePage } from './home';
+import { ReactQueryDevtools } from "react-query/devtools";
+import InfiniteScrollQuery from "./comonents/infiniteScroll";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +22,9 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/example' element={<ExampleQuery />} />
+          <Route path='/infinite-scroll' element={<InfiniteScrollQuery />} />
         </Routes>
+        <ReactQueryDevtools initialIsOpen />
       </QueryClientProvider>
     </BrowserRouter>
   );

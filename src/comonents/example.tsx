@@ -1,12 +1,14 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useQueryClient } from 'react-query';
+
 import { useAdddata, useFetchdataById, useFetchdata } from '../api/services/example';
 import '../App.css';
 import { allDataType } from '../interfaces/dataInterface';
 
 export const ExampleQuery = () => {
 
-
+    const queryClient = useQueryClient()
     const { data, isLoading } = useFetchdata()
     const { mutateAsync: mutateAsyncAddDataList } = useAdddata()
     // const [page, setPage] = useState(1)
@@ -27,6 +29,12 @@ export const ExampleQuery = () => {
 
     }
 
+    useEffect(() => {
+        return () => {
+            queryClient.cancelQueries('all')
+            console.log('leave this page and cancel api')
+        }
+    }, [])
 
     const loading = <h4>Loading</h4>
     const showData = data?.map((item: allDataType) => {
@@ -38,7 +46,10 @@ export const ExampleQuery = () => {
     // default
     return <div className="App">
         <header className="App-header">
-
+            {/* <button onClick={(e) => {
+                e.preventDefault()
+                queryClient.cancelQueries('all')
+            }}>Cancel</button> */}
             <button onClick={() => addItems()}>add</button>
             <h1>Example </h1>
             {!isLoading ? showData : loading}
@@ -57,3 +68,5 @@ export const ExampleQuery = () => {
     // </div>
 
 }
+
+

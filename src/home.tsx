@@ -19,6 +19,7 @@ export const HomePage = () => {
             </a>
             <ul>
                 <li onClick={() => navigate('/example')}>Example query</li>
+                <li onClick={() => navigate('/infinite-scroll')}>infinite-scroll query</li>
             </ul>
         </header>
 

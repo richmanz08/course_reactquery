@@ -53,3 +53,13 @@ code=> {onError:()=> ...to do something}
 code=> {onSettled:()=> ...to do something}
 ::: จะทำงานเมื่อการทำงานจบ โดยไม่สนว่า สำเร็จหรือไม่ก็ตาม
 @@@ สามารถทำที่ provider เพื่อทำการตรวจสอบและจัดการแบบรวบรัดได้ (***Good practice***)
+
+
+## Cancelled API 
+code =>  1. import { useQueryClient } from 'react-query';
+         2. const queryClient = useQueryClient()
+         2. queryClient.cancelQueries('key')
+code => useQuery(['key'], async ({ signal }) => { 
+    const resp = await fetch('/testapi', { signal })
+ })
+::: ระบบจะทำการ cancel api ตาม key ที่กำหนดหาก api เส้นนั้นๆยังคง pending อยู่
