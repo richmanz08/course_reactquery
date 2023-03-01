@@ -75,5 +75,87 @@
       "image_url": "asdsa",
       "title": "asd"
     }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Game of thrones season1"
+    },
+    {
+      "id": 2,
+      "title": "Game of thrones season2"
+    },
+    {
+      "id": 3,
+      "title": "Game of thrones season3"
+    },
+    {
+      "id": 4,
+      "title": "Game of thrones season4"
+    },
+    {
+      "id": 5,
+      "title": "Game of thrones season5"
+    },
+    {
+      "id": 6,
+      "title": "Game of thrones season6"
+    },
+    {
+      "id": 7,
+      "title": "Game of thrones season7"
+    },
+    {
+      "id": 8,
+      "title": "Game of thrones season8"
+    },
+    {
+      "id": 9,
+      "title": "Game of thrones season9"
+    },
+    {
+      "id": 10,
+      "title": "Game of thrones season10"
+    },
+    {
+      "id": 11,
+      "title": "Game of thrones season11"
+    },
+    {
+      "id": 12,
+      "title": "Game of thrones season12"
+    },
+    {
+      "id": 13,
+      "title": "Game of thrones season13"
+    },
+    {
+      "id": 14,
+      "title": "Game of thrones season14"
+    },
+    {
+      "id": 15,
+      "title": "Game of thrones season15"
+    },
+    {
+      "id": 16,
+      "title": "Game of thrones season16"
+    },
+    {
+      "id": 17,
+      "title": "Game of thrones season17"
+    },
+    {
+      "id": 18,
+      "title": "Game of thrones season18"
+    },
+    {
+      "id": 19,
+      "title": "Game of thrones season19"
+    },
+    {
+      "id": 20,
+      "title": "Game of thrones season20"
+    }
   ]
 }

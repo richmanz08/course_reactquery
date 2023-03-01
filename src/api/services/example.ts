@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { useQueryClient, useMutation, useQuery } from 'react-query';
+import { useQueryClient, useMutation, useQuery, useInfiniteQuery } from 'react-query';
 import { allDataType } from '../../interfaces/dataInterface';
 import { clientAPI } from "../axios"
 
@@ -35,4 +34,24 @@ export const useAdddata = () => {
     })
     return method
 
+}
+
+
+export const useInfiniteNews = () => {
+    const method = useInfiniteQuery(
+        'news',
+        async ({ pageParam = 0 }) => {
+            console.log('fetching')
+            const res = await clientAPI.get(`news?_page=${pageParam}&_limit=4`)
+            console.log({ res })
+
+            return res.data
+        },
+        {
+            getPreviousPageParam: firstPage => firstPage.previousId ?? undefined,
+            getNextPageParam: lastPage => lastPage.nextId ?? undefined,
+
+        }
+    )
+    return method
 }
