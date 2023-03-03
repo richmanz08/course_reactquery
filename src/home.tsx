@@ -20,6 +20,7 @@ export const HomePage = () => {
             <ul>
                 <li onClick={() => navigate('/example')}>Example query</li>
                 <li onClick={() => navigate('/infinite-scroll')}>infinite-scroll query</li>
+                <li onClick={() => navigate('/initmycache')}>initmycache get cache</li>
             </ul>
         </header>
 

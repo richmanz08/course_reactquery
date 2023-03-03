@@ -5,6 +5,7 @@ import { ExampleQuery } from './comonents/example';
 import { HomePage } from './home';
 import { ReactQueryDevtools } from "react-query/devtools";
 import InfiniteScrollQuery from "./comonents/infiniteScroll";
+import InitmyCache from "./comonents/initmycache";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/example' element={<ExampleQuery />} />
           <Route path='/infinite-scroll' element={<InfiniteScrollQuery />} />
+          <Route path='/initmycache' element={<InitmyCache />} />
         </Routes>
         <ReactQueryDevtools initialIsOpen />
       </QueryClientProvider>

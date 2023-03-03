@@ -10,6 +10,8 @@ export const ExampleQuery = () => {
 
     const queryClient = useQueryClient()
     const { data, isLoading } = useFetchdata()
+    console.log(data)
+
     const { mutateAsync: mutateAsyncAddDataList } = useAdddata()
     // const [page, setPage] = useState(1)
     // const { data, isLoading, isFetching } = useFetchdataById(page)

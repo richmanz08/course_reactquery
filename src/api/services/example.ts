@@ -1,14 +1,20 @@
+
 import { useQueryClient, useMutation, useQuery, useInfiniteQuery } from 'react-query';
 import { allDataType } from '../../interfaces/dataInterface';
 import { clientAPI } from "../axios"
-
+const mockup = [{
+    id: 0,
+    title: "asdas",
+    image_url: "asd"
+}]
 
 export const useFetchdata = () => {
-    // const CancelToken = axios.CancelToken
-    // const source = CancelToken.source()
     const method = useQuery(['all'], async ({ signal }) => {
         const res = await clientAPI.get('all', { signal });
         return res.data;
+    }, {
+        // initialData: mockup,
+        staleTime: 1000
     })
     return method
 }
@@ -37,21 +43,43 @@ export const useAdddata = () => {
 }
 
 
-export const useInfiniteNews = () => {
-    const method = useInfiniteQuery(
-        'news',
-        async ({ pageParam = 0 }) => {
-            console.log('fetching')
-            const res = await clientAPI.get(`news?_page=${pageParam}&_limit=4`)
-            console.log({ res })
+export const useInfiniteNews = (limit: number) => {
 
+    const method = useInfiniteQuery(
+        ['projects'],
+        async ({ pageParam = 1 }) => {
+            const res = await clientAPI.get(`news?_page=${pageParam}&_limit=${limit}`)
             return res.data
         },
         {
-            getPreviousPageParam: firstPage => firstPage.previousId ?? undefined,
-            getNextPageParam: lastPage => lastPage.nextId ?? undefined,
+            getNextPageParam: (data, all) => {
+                const currentData = data?.length
+                if (currentData === 0 || currentData < limit) {
+                    return
+                }
+                return all.length + 1 ?? undefined
+
+
+            },
 
         }
+
     )
+    return method
+}
+
+export const useQueryAllofNews = () => {
+    const method = useQuery(['news-key'], async ({ signal }) => {
+        const res = await clientAPI.get('news', { signal });
+        return res.data;
+    }, {
+        placeholderData: [{
+
+            id: 1,
+            title: "test",
+            detail: "detail sasa"
+
+        }]
+    })
     return method
 }

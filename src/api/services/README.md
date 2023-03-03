@@ -52,7 +52,7 @@ code=> {onError:()=> ...to do something}
 ::: จะทำงานเมื่อการทำงานนั้นจบ และ พบข้อผิดพลาด
 code=> {onSettled:()=> ...to do something}
 ::: จะทำงานเมื่อการทำงานจบ โดยไม่สนว่า สำเร็จหรือไม่ก็ตาม
-@@@ สามารถทำที่ provider เพื่อทำการตรวจสอบและจัดการแบบรวบรัดได้ (***Good practice***)
+@@@ onSuccess,onError,onSettled สามารถทำที่ provider เพื่อทำการตรวจสอบและจัดการแบบรวบรัดได้ (***Good practice***)
 
 
 ## Cancelled API 
@@ -63,3 +63,19 @@ code => useQuery(['key'], async ({ signal }) => {
     const resp = await fetch('/testapi', { signal })
  })
 ::: ระบบจะทำการ cancel api ตาม key ที่กำหนดหาก api เส้นนั้นๆยังคง pending อยู่
+
+
+
+
+## Infinite Scroll (จะประกอบไปด้วยคำสั่งที่สำคัญ 2 คำสั่ง)
+code => useInfiniteQuery(['key], async ({pageParam}) => {...})
+1. fetchNextPage() to getNextPageParam:()=>{}
+::: จะทำการเรียกข้อมูลชุดต่อไป มาต่อท้าย
+2. fetchPreviousPage() to getPreviousPageParam:()=>{}
+::: จะทำการเรียกข้อมูลชุดต่อไป มาต่อหัว
+
+
+
+## Initial of data when first time render file
+code => {placeholderData: initialData}
+::: api เส้นนี้จะทำการคืนค่า initial ให้กับ client เพื่อ ลดการเจอปัญหา data ที่เป็น undefined อาจทำให้งาน error

@@ -79,83 +79,159 @@
   "news": [
     {
       "id": 1,
-      "title": "Game of thrones season1"
+      "title": "Game of thrones season1",
+      "detail": "detail sasa"
     },
     {
       "id": 2,
-      "title": "Game of thrones season2"
+      "title": "Game of thrones season2",
+      "detail": "detail sasa"
     },
     {
       "id": 3,
-      "title": "Game of thrones season3"
+      "title": "Game of thrones season3",
+      "detail": "detail sasa"
     },
     {
       "id": 4,
-      "title": "Game of thrones season4"
+      "title": "Game of thrones season4",
+      "detail": "detail sasa"
     },
     {
       "id": 5,
-      "title": "Game of thrones season5"
+      "title": "Game of thrones season5",
+      "detail": "detail sasa"
     },
     {
       "id": 6,
-      "title": "Game of thrones season6"
+      "title": "Game of thrones season6",
+      "detail": "detail sasa"
     },
     {
       "id": 7,
-      "title": "Game of thrones season7"
+      "title": "Game of thrones season7",
+      "detail": "detail sasa"
     },
     {
       "id": 8,
-      "title": "Game of thrones season8"
+      "title": "Game of thrones season8",
+      "detail": "detail sasa"
     },
     {
       "id": 9,
-      "title": "Game of thrones season9"
+      "title": "Game of thrones season9",
+      "detail": "detail sasa"
     },
     {
       "id": 10,
-      "title": "Game of thrones season10"
+      "title": "Game of thrones season10",
+      "detail": "detail sasa"
     },
     {
       "id": 11,
-      "title": "Game of thrones season11"
+      "title": "Game of thrones season11",
+      "detail": "detail sasa"
     },
     {
       "id": 12,
-      "title": "Game of thrones season12"
+      "title": "Game of thrones season12",
+      "detail": "detail sasa"
     },
     {
       "id": 13,
-      "title": "Game of thrones season13"
+      "title": "Game of thrones season13",
+      "detail": "detail sasa"
     },
     {
       "id": 14,
-      "title": "Game of thrones season14"
+      "title": "Game of thrones season14",
+      "detail": "detail sasa"
     },
     {
       "id": 15,
-      "title": "Game of thrones season15"
+      "title": "Game of thrones season15",
+      "detail": "detail sasa"
     },
     {
       "id": 16,
-      "title": "Game of thrones season16"
+      "title": "Game of thrones season16",
+      "detail": "detail sasa"
     },
     {
       "id": 17,
-      "title": "Game of thrones season17"
+      "title": "Game of thrones season17",
+      "detail": "detail sasa"
     },
     {
       "id": 18,
-      "title": "Game of thrones season18"
+      "title": "Game of thrones season18",
+      "detail": "detail sasa"
     },
     {
       "id": 19,
-      "title": "Game of thrones season19"
+      "title": "Game of thrones season19",
+      "detail": "detail sasa"
     },
     {
       "id": 20,
-      "title": "Game of thrones season20"
+      "title": "Game of thrones season20",
+      "detail": "detail sasa"
+    },
+    {
+      "id": 21,
+      "title": "Game of thrones season21",
+      "detail": "detail sasa"
+    },
+    {
+      "id": 22,
+      "title": "Game of thrones season22",
+      "detail": "detail sasa"
+    }
+  ],
+  "news_scroll": [
+    {
+      "list": [
+        {
+          "id": 1,
+          "title": "Game of thrones season1"
+        },
+        {
+          "id": 2,
+          "title": "Game of thrones season2"
+        },
+        {
+          "id": 3,
+          "title": "Game of thrones season3"
+        },
+        {
+          "id": 4,
+          "title": "Game of thrones season4"
+        }
+      ],
+      "nextId": 1,
+      "previousId": 0
+    },
+    {
+      "list": [
+        {
+          "id": 5,
+          "title": "Game of thrones season5"
+        },
+        {
+          "id": 6,
+          "title": "Game of thrones season6"
+        },
+        {
+          "id": 7,
+          "title": "Game of thrones season7"
+        },
+        {
+          "id": 8,
+          "title": "Game of thrones season8"
+        }
+      ],
+      "nextId": 2,
+      "previousId": 1
     }
   ]
 }

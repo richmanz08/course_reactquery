@@ -1,31 +1,41 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+// import { useParams, useRoutes, useSearchParams } from 'react-router-dom'
 import { useInfiniteNews } from '../api/services/example'
 
 
 const InfiniteScrollQuery = () => {
-    const { ref, inView } = useInView()
+    // const params = useParams()
+    // const [QueryURL] = useSearchParams()
 
+    // const params = useParams()
+    // console.log(params)
+    // const ser
+
+    const { ref, inView } = useInView()
+    const [limit] = useState(5)
     const {
         status,
         data,
-        isFetching,
+        // isFetching,
         isFetchingNextPage,
-        isFetchingPreviousPage,
+        // isFetchingPreviousPage,
         fetchNextPage,
-        fetchPreviousPage,
+        // fetchPreviousPage,
+
+        refetch,
         hasNextPage,
-        hasPreviousPage,
-    } = useInfiniteNews()
+        // hasPreviousPage,
+    } = useInfiniteNews(limit)
 
     React.useEffect(() => {
-        if (inView) {
-            console.log(inView)
-
+        if (inView && !isFetchingNextPage) {
             fetchNextPage()
         }
-    }, [fetchNextPage, inView])
+    }, [inView])
     console.log(data)
+    // console.log({ hasNextPage })
 
     return (
         <div className="App">
@@ -38,7 +48,7 @@ const InfiniteScrollQuery = () => {
                     <span>Error: error page loading</span>
                 ) : (
                     <>
-                        <div>
+                                {/* <div>
                             <button
                                 onClick={() => fetchPreviousPage()}
                                 disabled={!hasPreviousPage || isFetchingPreviousPage}
@@ -49,27 +59,28 @@ const InfiniteScrollQuery = () => {
                                         ? 'Load Older'
                                         : 'Nothing more to load'}
                             </button>
-                        </div>
+                        </div> */}
 
 
-                                {/* {data?.pages.map(page => (
-                                    <React.Fragment key={page.id}>
-                                        {page.data.map((project: any) => (
+                                {data?.pages?.map((page, idx) => (
+                                    <React.Fragment key={`master-${idx}`}>
+                                        {page?.map((item: any) => (
                                             <p
                                                 style={{
                                                     border: '1px solid gray',
                                                     borderRadius: '5px',
-                                                    padding: '10rem 1rem',
-                                                    background: `hsla(${project.id * 30}, 60%, 80%, 1)`,
+                                                    padding: '5rem 10rem',
+                                                    color: '#000',
+                                                    background: `hsla(${item.id * 30}, 60%, 80%, 1)`,
                                                 }}
-                                                key={project.id}
+                                                key={item.id}
                                             >
-                                        {project.title}
-                                    </p>
-                                ))}
+                                                {item.title}
+                                            </p>
+                                        ))}
                                     </React.Fragment>
-                                ))} */}
-                                <div>
+                                ))}
+                                {/* <div>
                                     <button
                                         ref={ref}
                                         onClick={() => fetchNextPage()}
@@ -81,13 +92,17 @@ const InfiniteScrollQuery = () => {
                                                 ? 'Load Newer'
                                                 : 'Nothing more to load'}
                                     </button>
-                                </div>
+                                </div> */}
+                                {!hasNextPage && <span style={{ color: 'red', cursor: 'pointer' }}
+                                    onClick={() => refetch()
+                                    } >No more to load and click to refresh</span>}
 
                         <div>
-                            {isFetching && !isFetchingNextPage
-                                ? 'Background Updating...'
+                                    {isFetchingNextPage
+                                        ? <span >Loading ...</span>
                                 : null}
                         </div>
+                                {hasNextPage && <div ref={ref} />}  
                     </>
                 )}
                 <hr />
