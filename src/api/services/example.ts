@@ -88,8 +88,6 @@ export const useQueryByIDofNews = (id: number) => {
     const method = useQuery(['news-byId', id], async () => {
         const res = await clientAPI.get(`news?id=${id}`);
         return res.data[0];
-    }, {
-        enabled: false
     })
     return method
 }

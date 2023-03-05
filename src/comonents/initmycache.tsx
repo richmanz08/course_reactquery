@@ -20,8 +20,8 @@ const InitmyCache = () => {
     //     const dataInCache = queryClient.getQueryCache(["queriesMap"])
     // console.log(dataInCache?.queriesMap)
 
-    // const a = queryClient.getQueryCache().get()
-    // console.log(a)
+    const a = queryClient.getQueryCache().get('news-byId')
+    console.log(a)
 
 
     return <div className="App">
