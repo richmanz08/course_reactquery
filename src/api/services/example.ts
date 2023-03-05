@@ -1,5 +1,5 @@
 
-import { useQueryClient, useMutation, useQuery, useInfiniteQuery } from 'react-query';
+import { useQueryClient, useMutation, useQuery, useInfiniteQuery, QueryClient } from 'react-query';
 import { allDataType } from '../../interfaces/dataInterface';
 import { clientAPI } from "../axios"
 const mockup = [{
@@ -80,6 +80,16 @@ export const useQueryAllofNews = () => {
             detail: "detail sasa"
 
         }]
+    })
+    return method
+}
+export const useQueryByIDofNews = (id: number) => {
+
+    const method = useQuery(['news-byId', id], async () => {
+        const res = await clientAPI.get(`news?id=${id}`);
+        return res.data[0];
+    }, {
+        enabled: false
     })
     return method
 }

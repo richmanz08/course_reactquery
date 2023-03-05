@@ -1,6 +1,3 @@
-
-
-
 ## Provider caching data (!important)
 code => { staleTime: Infinity }
 ::: ระบบจะทำการ caching data ไว้ จนกว่าจะ refresh หรือ close app
@@ -30,8 +27,16 @@ code => { keepPreviousData: true }
 
 
 ## Invalidate Query
-code => onSuccess: async () => { await queryClient.invalidateQueries(['key']) }
+code =>  await queryClient.invalidateQueries(['key']) 
 ::: ระบบจะทำการไปเรียก api เส้นนั้นๆใหม่ *จะพบเจอได้บ่อยในระบบ การ add ข้อมูล 
+
+## Refetch Query
+code => await queryClient.refetchQueries()
+::: ระบบจะทำการ fetch query ที่เชื่อมต่ออยู่ ทั้งหมดอีกครั้ง 
+code => await queryClient.refetchQueries(['key'])
+::: ระบบจะทำการ fetch query ที่เชื่อมต่ออยู่ จาก key แบบไม่เจาะจง
+code => await queryClient.refetchQueries(['key',id])
+::: ระบบจะทำการ fetch query ที่เชื่อมต่ออยู่ จาก key แบบเจาะจง 
 
 ## Refetch Data 
 code => const {...,refetch} = func()  
@@ -79,3 +84,14 @@ code => useInfiniteQuery(['key], async ({pageParam}) => {...})
 ## Initial of data when first time render file
 code => {placeholderData: initialData}
 ::: api เส้นนี้จะทำการคืนค่า initial ให้กับ client เพื่อ ลดการเจอปัญหา data ที่เป็น undefined อาจทำให้งาน error
+
+
+## Access data in React-query
+code => 1. const queryClient = useQueryClient()
+        - 1.1 queryClient.getQueryData(['key', id]) ::: การเข้าถึงแบบเฉพาะเจาะจงของรายการ
+        - 1.2 queryClient.getQueriesData(['key']) ::: การเข้าถึงข้อมูลแบบทั้งหมดของรายการ
+
+
+## Clear cache in React-query
+code => queryClient.clear()
+::: ระบบจะทำการ clear cache ทั้งหมดออกจากระบบ
