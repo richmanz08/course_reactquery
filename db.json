@@ -1,237 +1,82 @@
-{
-  "all": [
+{ "locations":[
+  {
+    "id":1,
+    "title":"วัดพระเเก้ว กรุงเทพฯ"
+  },{
+    "id":2,
+    "title":"ถ้ำมรกต เกาะมุก ตรัง"
+  },{
+    "id":3,
+    "title":"จุดชมวิวเนินมะปราง พิษณุโลก"
+  }
+  ,{
+    "id":4,
+    "title":"ไร่ชาฉุยฟง เชียงราย"
+  }
+  ,{
+    "id":5,
+    "title":"เชียงคาน เลย"
+  }
+  ,{
+    "id":6,
+    "title":"ตึกชิโนโปตุกีส เมืองเก่าภูเก็ต "
+  }
+  ,{
+    "id":7,
+    "title":"เกาะตาชัย พังงา"
+  },{
+    "id":8,
+    "title":"บ่อน้ำพุร้อนฝาง เชียงใหม่"
+  }
+],
+  "detail_location":[
     {
-      "id": 1,
-      "title": "korea",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
+      "id":1,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0deb8900-ed4c-11ec-809d-c172d7e1e8bc_webp_original.jpg",
+      "title":"วัดพระเเก้ว กรุงเทพฯ",
+      "description":"  วัดคู่บ้านคู่เมืองของประเทศไทย และกรุงรัตนโกสินทร์ ก็คือที่นี่ค่ะ วัดพระศรีรัตนศาสดาราม หรือ วัดพระเเก้ว เป็นวัดในพระบรมมหาราชวังเช่นเดียวกับวัดพระศรีสรรเพชญ์ ซึ่งเป็นวัดในพระราชวังหลวงในสมัยอยุธยานอกจากนี้ภายในวัดพระศรีรัตนศาสดารามเป็นที่ประดิษฐาน พระพุทธมหามณีรัตนปฏิมากร หรือ พระแก้วมรกต ซึ่งอัญเชิญมามาจากกรุงเวียงจันทน์ เป็นวัดหลวงที่สำคัญในพระราชพิธีต่างๆ และยังเป็นแหล่งท่องเที่ยวที่สำคัญของประเทศไทยเราอีกด้วย"
     },
     {
-      "id": 2,
-      "title": "japan",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
+      "id":2,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0a696720-ed4c-11ec-8c1d-03d351db4564_webp_original.jpg",
+      "title":"ถ้ำมรกต เกาะมุก ตรัง",
+      "description":"เกาะมุก ได้ชื่อว่า “ถ้ำมรกตอันล้ำค่าแห่งอันดามัน” เป็นเกาะที่ใหญ่เป็นอันดับที่ 3 ของท้องทะเลตรังเลยทีเดียว นอกจากชาดหาดที่สวยงามแล้ว เกาะมุกยังมีจุดเด่นที่ ถ้ำมรกต ถ้ำน้ำเล็กๆ ซึ่งมีความยาวประมาณ 80 เมตร นักท่องเที่ยวจะต้องลอยตัวฝ่าความมืดเพื่อเข้าไปภายในถ้ำและต้องเป็นช่วงเวลาน้ำลงเท่านั้นด้วย ภายในถ้ำน้ำทะเลจะมีสีเขียวคล้ายมรกตสวยงามอลังการ Unseen สุดๆ"
     },
     {
-      "id": 3,
-      "title": "Austria",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
+      "id":3,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0c71e150-ed4c-11ec-97cd-9d7e440efe6f_webp_original.jpg",      
+      "title":"จุดชมวิวเนินมะปราง พิษณุโลก",
+      "description":"ถ้ามีโอกาสไปเที่ยวพิษณุโลก แต่ไม่ได้ไปนั่งชิงช้าต้นไม้ ที่ จุดชมวิวเนินมะปราง ซึ่งตั้งอยู่ใน บ้านสวนชมวิวภูรักไทย เราบอกเลยว่าพลาดอย่างแรง!!! เพราะเป็น จุดชมวิวที่สวยที่สุดในพิษณุโลก ทีเดียวค่ะ จากจุดชมวิวบนต้นไม้นี้สามารถมองออกไปเห็นทิวเขาและพื้นที่ราบรอยต่อของ 5 จังหวัด คือ นครสวรรค์ ลพบุรี พิจิตร เพชรบูรณ์ และพิษณุโลก เวลาที่แนะนำให้มาเลยก็คือช่วงปลายฝนต้นหนาว เพราะจะได้เห็นทั้งทะเลหมอกและพระอาทิตย์ขึ้นยามเช้าเลยทีเดียว"    
     },
-    {
-      "id": 4,
-      "title": "North korea",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
-    },
-    {
-      "id": 5,
-      "title": "India",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
-    },
-    {
-      "id": 6,
-      "title": "Switzerland",
-      "image_url": "https://www.japan.go.jp/kizuna/_src/7988222/202012_p04-05_01.jpg?v=1646642059239"
-    },
-    {
-      "id": 7,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 8,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 9,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 10,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 11,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 12,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 13,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 14,
-      "image_url": "asdsa",
-      "title": "asd"
-    },
-    {
-      "id": 15,
-      "image_url": "asdsa",
-      "title": "asd"
-    }
-  ],
-  "news": [
-    {
-      "id": 1,
-      "title": "Game of thrones season1",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 2,
-      "title": "Game of thrones season2",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 3,
-      "title": "Game of thrones season3",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 4,
-      "title": "Game of thrones season4",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 5,
-      "title": "Game of thrones season5",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 6,
-      "title": "Game of thrones season6",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 7,
-      "title": "Game of thrones season7",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 8,
-      "title": "Game of thrones season8",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 9,
-      "title": "Game of thrones season9",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 10,
-      "title": "Game of thrones season10",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 11,
-      "title": "Game of thrones season11",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 12,
-      "title": "Game of thrones season12",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 13,
-      "title": "Game of thrones season13",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 14,
-      "title": "Game of thrones season14",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 15,
-      "title": "Game of thrones season15",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 16,
-      "title": "Game of thrones season16",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 17,
-      "title": "Game of thrones season17",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 18,
-      "title": "Game of thrones season18",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 19,
-      "title": "Game of thrones season19",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 20,
-      "title": "Game of thrones season20",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 21,
-      "title": "Game of thrones season21",
-      "detail": "detail sasa"
-    },
-    {
-      "id": 22,
-      "title": "Game of thrones season22",
-      "detail": "detail sasa"
-    }
-  ],
-  "news_scroll": [
-    {
-      "list": [
         {
-          "id": 1,
-          "title": "Game of thrones season1"
-        },
-        {
-          "id": 2,
-          "title": "Game of thrones season2"
-        },
-        {
-          "id": 3,
-          "title": "Game of thrones season3"
-        },
-        {
-          "id": 4,
-          "title": "Game of thrones season4"
-        }
-      ],
-      "nextId": 1,
-      "previousId": 0
+      "id":4,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0a5c95e0-ed4c-11ec-8c1d-03d351db4564_webp_original.jpg",      
+      "title":"ไร่ชาฉุยฟง เชียงราย",
+      "description":"นอกจาก เชียงราย จะเป็นจังหวัดที่มีสถานที่ท่องเที่ยวชื่อดังอย่าง วัดร่องขุ่น บ้านดำ ดอยตุง แล้ว ที่นี่ยังเป็นอีกจังหวัดหนึ่งที่มีการทำไร่ชาตามแนวภูเขาค่ะ และแน่นอนว่าตรงจุดนี้เอง ทำให้เราเห็นวิวภูเขาสูงรายล้อมไร่ชาสีเขียวเป็นแนวยาว และฟ้าสีครามไร่ชาฉุยฟง ตั้งอยู่ที่ อำเภอแม่จัน ค่ะ ที่นี่เป็นแหล่งปลูกชาชั้นดี และมีกิจกรรมให้นักท่องเที่ยวสามารถลงไปถ่ายรูปสวยๆ กับไร่ชาได้ ถ้ามาตอนเช้าหน่อยๆ ก็จะได้เห็นคุณป้า คุณอา มาเก็บยอดอ่อนใบชาด้วยนะ นอกจากนี้ ยังมีคาเฟ่ไว้ให้บริการคนที่มาเที่ยวอีกด้วย แน่นอนว่า ทุกอย่างในร้าน แทบจะมาจาก ชา ทั้งหมดเลยค่ะ"    
+    },
+     {
+      "id":5,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/09af3ee0-ed4c-11ec-96a3-69bbfc5dc41a_webp_original.jpg",      
+      "title":"เชียงคาน เลย",
+      "description":"เชียงคาน เมืองที่ยังคงความสวยงามด้วยสถาปัตยกรรมโบราณดั้งเดิม เป็นที่ดึงดูดใจของนักท่องเที่ยวมาทุกยุคทุกสมัย ไม่น่าเชื่อว่าตรอกเล็กๆ ริมน้ำโขงแห่งนี้จะมีนักท่องเที่ยวทุกมุมโลกมาเยี่ยมเยียนอย่างไม่ขาดสาย และที่สำคัญเป็นเมืองท่องเที่ยวที่สามารถไปเที่ยวได้ในทุกช่วงเวลาทั้งหน้าร้อน หน้าฝน โดยเฉพาะอย่างยิ่งในหน้าหนาวค่ะกิจกรรมสุดฮิตก็คือ การมาเดินเที่ยว ถนนคนเดินเชียงคาน หาของอร่อยท้องถิ่นชิม รวมถึงตอนเช้าตรู่ที่เราต้องไม่พลาดตื่นมา ตักบาตรข้าวเหนียว อีกด้วย"    
+    },
+     {
+      "id":6,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0d2fb310-ed4c-11ec-96a3-69bbfc5dc41a_webp_original.jpg",      
+      "title":"ตึกชิโนโปตุกีส เมืองเก่าภูเก็ต ",
+      "description":"ใครว่า ภูเก็ต ทะเลสวยอย่างเดียว ขอเถียงคอเป็นเอ็นเลยค่ะว่าไม่จริ๊ง ไม่จริง เพราะนอกจากทะเลสวย น้ำใส หมู่เกาะต่างๆ แล้ว ในตัวเมืองภูเก็ตเขาก็มีของดีที่หาชมที่ไหนได้ยากอยู่ด้วยเหมือนกัน นั่นก็คือ เมืองเก่าภูเก็ต ตึกชิโนโปตุกีส หลากหลายสีสัน เพราะฉะนั้นใครที่กำลังจะไปเที่ยวภูเก็ต ขอให้ไปเดินเล่นชิลในเมืองดูสักครั้ง รับรองได้รูปสวยๆ จนเมมเต็มแน่นอน!"
+    },
+     {
+      "id":7,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0c7319d0-ed4c-11ec-809d-c172d7e1e8bc_webp_original.jpg",      
+      "title":"เกาะตาชัย พังงา",
+      "description":"เกาะตาชัย ขึ้นชื่อเรื่องหาดทรายขาวราวคอฟฟี่เมต เป็นที่เที่ยวนิยมมากๆ ในไม่กี่ปีมานี้ค่ะ เกาะตาชัยเป็นส่วนหนึ่งของ อุทยานแห่งชาติหมู่เกาะสิมิลัน ทางอุทยานฯ ได้เปิดให้นักท่องเที่ยวได้มีโอกาสเข้าไปยลโฉมได้สักพัก แต่ตอนนี้เป็นช่วงปิดการท่องเที่ยว เพื่อให้ธรรมชาติได้ฟื้นฟู เราก็ได้แต่รอว่า เมื่อไหร่ที่ เกาะตาชัย จะกลับมาเปิดให้สามารถท่องเที่ยวกันได้อีกครั้ง "
     },
     {
-      "list": [
-        {
-          "id": 5,
-          "title": "Game of thrones season5"
-        },
-        {
-          "id": 6,
-          "title": "Game of thrones season6"
-        },
-        {
-          "id": 7,
-          "title": "Game of thrones season7"
-        },
-        {
-          "id": 8,
-          "title": "Game of thrones season8"
-        }
-      ],
-      "nextId": 2,
-      "previousId": 1
+      "id":8,
+      "img_url":"https://cms.dmpcdn.com/travel/2022/06/16/0ba45820-ed4c-11ec-97cd-9d7e440efe6f_webp_original.jpg",
+      "title":"บ่อน้ำพุร้อนฝาง เชียงใหม่",
+      "description":"บ่อน้ำพุร้อนฝาง ตั้งอยู่ใน อุทยานแห่งชาติดอยผ้าห่มปก ซึ่งมีความอุดมสมบูรณ์ทางธรรมชาติมาก บ่อน้ำพุร้อนมีมากกว่า 50 บ่อ กระจายไปทั่วพื้นที่ และมีขนาดใหญ่เล็กแตกต่างกันไป อุณหภูมิสูงประมาณ 90 องศาเซลเซียส มีบริการบ่อแช่น้ำแร่อาบน้ำแร่แบบส่วนตัว อุณหภูมิอุ่นพอดีช่วยให้สบายตัวและดีต่อผิวพรรณ นอกจากนี้ยังมีบ่อต้มไข่ไว้ให้อิ่มอร่อยกันอีกด้วย"
     }
   ]
 }
