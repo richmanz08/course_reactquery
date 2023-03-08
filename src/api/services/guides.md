@@ -1,7 +1,27 @@
-## Provider caching data (!important)
+## Services caching  (!important)
 code => { staleTime: Infinity }
+::: ระบบจะทำการ caching service ไว้ จนกว่าจะ refresh หรือ close app
+::: จะใส่เป็นบาง service ก็ได้
+
+## Time of Cache data
+code => { cacheTime: Infinity}
 ::: ระบบจะทำการ caching data ไว้ จนกว่าจะ refresh หรือ close app
 ::: จะใส่เป็นบาง service ก็ได้
+
+## cacheTime VS staleTime ?
+::: cacheTime นั้นคือเวลามีอยู่ของข้อมูลหลังจากการ fetch
+example => cacheTime: 5000 // นั่นคือข้อมูลจะคงอยู่เป็นระยะเวลา 5 วินาที ** จะเริ่มนับถอยหลังเมื่อ เป็น inactive เท่านั้น
+
+::: staleTime นั้นคือเวลาการมีอยู่ของ service ที่ถูกเรียก
+example => staleTime: 5000 // เส้น api นี้จะไม่ถูกเรียกซ้ำอีกครั้งหากองค์ประกอบเหมือนเดิม เป็นระยะเวลา 5 วินาที ** จะเริ่มนับถอยหลังทันทีหลังจากเรียกใช้งาน
+
+
+
+## Fresh & Fetching & Stale & Inactive
+::: fresh คือ services ใดๆ ที่มีการเรียกและยังคงใช้งานอยู่
+::: fetching คือ services ใดๆ ที่มีการเรียกอยู่และยังทำงานไม่เสร็จ
+::: stale คือ services ใดๆ ที่หมดอายุและยังใช้งานอยู่  หากมีการเรียกใช้จะทำงานใหม่อีกครั้ง 
+::: inactive คือ services ใดๆ ที่เคยเรียก และไม่ได้ใช้งานแล้ว
 
 ## Syntax to Query keys for Caching a data (!important)
 code => useQuery(['this-key-name','key'],function)
@@ -95,3 +115,6 @@ code => 1. const queryClient = useQueryClient()
 ## Clear cache in React-query
 code => queryClient.clear()
 ::: ระบบจะทำการ clear cache ทั้งหมดออกจากระบบ
+
+
+

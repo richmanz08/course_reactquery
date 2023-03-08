@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ExampleQuery } from './comonents/example';
-import { HomePage } from './home';
+import { HomePage } from './comonents';
 import { ReactQueryDevtools } from "react-query/devtools";
 import InfiniteScrollQuery from "./comonents/infiniteScroll";
 import InitmyCache from "./comonents/initmycache";
@@ -12,6 +12,7 @@ const queryClient = new QueryClient({
     queries: {
       refetchOnWindowFocus: false,
       staleTime: Infinity,
+      cacheTime: Infinity
     }
   },
 })

@@ -1,27 +1,29 @@
-import { useState } from "react"
-import { useQueryClient } from "react-query"
+import { useEffect, useState } from "react"
+import { useQueryClient, useIsFetching } from "react-query"
 import { useQueryAllofNews, useQueryByIDofNews } from "../api/services/example"
 
 const InitmyCache = () => {
     const { data } = useQueryAllofNews()
     const queryClient = useQueryClient()
 
-    const [id, setId] = useState(0)
+    const [id, setId] = useState(1)
     const { data: dataItem } = useQueryByIDofNews(id)
+    // const isFetchingByidNews = useIsFetching()
+    // console.log({ isFetchingByidNews })
+
     const handle = (id: number) => {
         // console.log({ id })
         setId(id)
-
+        // refetch()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     // console.log({ dataItem });
     // console.log(queryClient.getQueryData(['news-byId', id]))
     // console.log(queryClient.getQueriesData(['news-byId']))
     // console.log(queryClient.getQueryCache())
     //     const dataInCache = queryClient.getQueryCache(["queriesMap"])
     // console.log(dataInCache?.queriesMap)
-
-    const a = queryClient.getQueryCache().get('news-byId')
-    console.log(a)
 
 
     return <div className="App">
