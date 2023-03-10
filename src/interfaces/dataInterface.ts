@@ -1,5 +1,8 @@
-export interface allDataType {
+export interface DataType {
     id: number
     title: string
-    image_url: string
+    img_url: string
+    description: string
+
+
 }

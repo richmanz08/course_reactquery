@@ -1,6 +1,6 @@
 
 import { useQueryClient, useMutation, useQuery, useInfiniteQuery, QueryClient } from 'react-query';
-import { allDataType } from '../../interfaces/dataInterface';
+import { DataType } from '../../interfaces/dataInterface';
 import { clientAPI } from "../setting"
 // const mockup = [{
 //     id: 0,
@@ -32,7 +32,7 @@ export const useFetchdataById = (id: number) => {
 export const useAdddata = () => {
 
     const queryClient = useQueryClient();
-    const method = useMutation(['add-data'], async (params: allDataType) => {
+    const method = useMutation(['add-data'], async (params: DataType) => {
         const post = await clientAPI.post('all', params)
         return post
     }, {

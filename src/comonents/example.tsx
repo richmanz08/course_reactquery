@@ -4,7 +4,7 @@ import { useQueryClient } from 'react-query';
 
 import { useAdddata, useFetchdataById, useFetchdata } from '../api/services/example';
 import '../App.css';
-import { allDataType } from '../interfaces/dataInterface';
+import { DataType } from '../interfaces/dataInterface';
 
 export const ExampleQuery = () => {
 
@@ -18,10 +18,11 @@ export const ExampleQuery = () => {
     // console.log(page, isLoading, isFetching)
 
     const addItems = async () => {
-        const params: allDataType = {
+        const params: DataType = {
             id: data.length + 1,
-            image_url: 'asdsa',
-            title: 'asd'
+            img_url: 'asdsa',
+            title: 'asd',
+            description: "non"
         }
         // const response1 = mutateAddDataList(params)
         // console.log('mutate', response1)
@@ -39,10 +40,10 @@ export const ExampleQuery = () => {
     }, [])
 
     const loading = <h4>Loading</h4>
-    const showData = data?.map((item: allDataType) => {
+    const showData = data?.map((item: DataType) => {
         return (<div key={`key-${item.id}`}>
             <h4>{item.title}</h4>
-            <img style={{ width: 100 }} src={item.image_url} alt='empty' />
+            <img style={{ width: 100 }} src={item.img_url} alt='empty' />
         </div>)
     })
     // default

@@ -1,5 +1,5 @@
 const MutationsPractice = () => {
-    return <div>
+    return <div className="App-header">
         <h1>Practice :: Mutations </h1>
     </div>
 }

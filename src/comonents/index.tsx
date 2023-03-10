@@ -18,9 +18,11 @@ export const HomePage = () => {
                 Let get started
             </a>
             <ul>
-                <li onClick={() => navigate('/example')}>Example query</li>
+                {/* <li onClick={() => navigate('/example')}>Example query</li>
                 <li onClick={() => navigate('/infinite-scroll')}>infinite-scroll query</li>
-                <li onClick={() => navigate('/initmycache')}>initmycache get cache</li>
+                <li onClick={() => navigate('/initmycache')}>initmycache get cache</li> */}
+                <li onClick={() => navigate('/usequery')}>Example React useQuery</li>
+                <li onClick={() => navigate('/pagination')}>Example pagination keep previous data</li>
             </ul>
         </header>
 
