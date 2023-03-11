@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list-box {
+  background-color: rgba(90, 88, 85, 0.363);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  grid-gap: 12px;
+}
