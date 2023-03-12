@@ -1,5 +1,5 @@
 const InfiniteQuelyPractice = () => {
-    return <div>
+    return <div className="App-header">
         <h1>Practice :: InfiniteQuely </h1>
     </div>
 }

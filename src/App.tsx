@@ -10,6 +10,8 @@ import UseQueryPractice from "./comonents/practice/usequery";
 import PaginationPractice from "./comonents/practice/pagination";
 import MutationsPractice from "./comonents/practice/mutations";
 import InvalidatePractice from "./comonents/practice/invalidate";
+import HandlePractice from "./comonents/practice/handle-api";
+import InfiniteQuelyPractice from "./comonents/practice/infinite-scroll";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,6 +35,8 @@ const App = () => {
             <Route path="/pagination" element={<PaginationPractice />} />
             <Route path="/mutation" element={<MutationsPractice />} />
             <Route path="/invalidate" element={<InvalidatePractice />} />
+            <Route path="/handle/:id" element={<HandlePractice />} />
+            <Route path="/infinite-scroll" element={<InfiniteQuelyPractice />} />
         </Routes>
         <ReactQueryDevtools initialIsOpen />
         </Hydrate>

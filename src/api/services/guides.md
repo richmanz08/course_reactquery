@@ -29,8 +29,10 @@ code => useQuery(['this-key-name','key'],function)
 ## How to retry to fetch api When api error
 code => { retry: 3} 
 ::: ระบบจะทำงานอีก 3 รอบหลังจาก failed ครั้งแรก
+::: หากไม่กำหนดไว้ ค่า default คือ 3 รอบ 
 code => { retryDelay: 1000 } 
 ::: หน่วงระยะเวลาการเริ่มต้น fetch อีกครั้ง  หน่วยจะเป็น ms
+
 
 ## Window Focus Refetching Of Structure
 code => { refetchOnWindowFocus: true }

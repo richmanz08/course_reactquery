@@ -21,7 +21,9 @@ export const HomePage = () => {
                 <li onClick={() => navigate('/usequery')}> React useQuery</li>
                 <li onClick={() => navigate('/mutation')}> Mutation</li>
                 <li onClick={() => navigate('/invalidate')}> Invalidate</li>
+                <li onClick={() => navigate('/handle')}>Handle API</li>
                 <li onClick={() => navigate('/pagination')}>Pagination keep previous data</li>
+                <li onClick={() => navigate('/infinite-scroll')}>Infinite Scroll</li>
             </ul>
         </header>
 
