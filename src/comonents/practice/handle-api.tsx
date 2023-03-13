@@ -14,6 +14,7 @@ const HandlePractice = () => {
     const [api, contextHolder] = notification.useNotification();
 
     const openNotificationWithIcon = useCallback((type: NotificationType) => {
+
         if (type === 'success') {
             api[type]({
                 message: 'API Connection success',
