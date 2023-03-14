@@ -19,4 +19,18 @@ code {
   flex-direction: column;
   margin-left: 16px;
   grid-gap: 34px;
+  margin-top: 8px;
+}
+
+.list-box-warp {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 12px;
+}
+
+.img-tag {
+  width: 30px;
+  height: 20px;
+  margin-right: 8px;
 }

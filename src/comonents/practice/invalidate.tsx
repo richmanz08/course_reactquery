@@ -1,8 +1,7 @@
 import { useCreateLocationInvalidate } from "../../api/services/hook-invalidate"
 import { useFetchLocationList } from "../../api/services/hook-usequery"
 import { DataType } from "../../interfaces/dataInterface"
-import { Alert, Button, Form, Input, Row, Spin, Tag } from "antd"
-// import { useState } from "react"
+import { Alert, Button, Form, Input, Row, Spin } from "antd"
 
 const InvalidatePractice = () => {
     const { data } = useFetchLocationList()

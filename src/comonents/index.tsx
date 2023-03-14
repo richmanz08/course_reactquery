@@ -22,6 +22,7 @@ export const HomePage = () => {
                 <li onClick={() => navigate('/mutation')}> Mutation</li>
                 <li onClick={() => navigate('/invalidate')}> Invalidate</li>
                 <li onClick={() => navigate('/handle/1')}>Handle API</li>
+                <li onClick={() => navigate('/cancelled')}>Cancelled API (Performance practice)</li>
                 <li onClick={() => navigate('/pagination')}>Pagination keep previous data</li>
                 <li onClick={() => navigate('/infinite-scroll')}>Infinite Scroll</li>
             </ul>
