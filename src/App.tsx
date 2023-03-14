@@ -10,6 +10,7 @@ import InvalidatePractice from "./comonents/practice/invalidate";
 import HandlePractice from "./comonents/practice/handle-api";
 import InfiniteQuelyPractice from "./comonents/practice/infinite-scroll";
 import CancelledApiPractice from "./comonents/practice/cancelled-api";
+import CachePractice from "./comonents/practice/cache";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,15 +23,16 @@ const queryClient = new QueryClient({
 })
 
 const App = () => {
-  const dehydratedState = dehydrate(queryClient, { shouldDehydrateQuery: () => true })
+  // const dehydratedState = dehydrate(queryClient, { shouldDehydrateQuery: () => true })
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <Hydrate state={dehydratedState}>
+        {/* <Hydrate state={dehydratedState}> */}
         <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path="/usequery" element={<UseQueryPractice />} />
             <Route path="/pagination" element={<PaginationPractice />} />
+          <Route path="/cache" element={<CachePractice />} />
             <Route path="/mutation" element={<MutationsPractice />} />
             <Route path="/invalidate" element={<InvalidatePractice />} />
             <Route path="/cancelled" element={<CancelledApiPractice />} />
@@ -38,7 +40,7 @@ const App = () => {
             <Route path="/infinite-scroll" element={<InfiniteQuelyPractice />} />
         </Routes>
         <ReactQueryDevtools initialIsOpen />
-        </Hydrate>
+        {/* </Hydrate> */}
       </QueryClientProvider>
     </BrowserRouter>
   );

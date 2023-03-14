@@ -7,7 +7,7 @@ export const useFetchCancelled = (search: string) => {
         return res.data;
     }, {
         // staleTime: 500,
-        cacheTime: 500
+        cacheTime: 2000
     })
     return method
 }

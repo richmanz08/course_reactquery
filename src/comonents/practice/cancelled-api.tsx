@@ -8,7 +8,7 @@ import Tagcommon from "../common/tag"
 
 const CancelledApiPractice = () => {
     const [search, setSearch] = useState('')
-    const { data, isLoading } = useFetchCancelled(search)
+    const { data, isLoading, refetch } = useFetchCancelled(search)
     const queryClient = useQueryClient()
 
 
@@ -22,12 +22,19 @@ const CancelledApiPractice = () => {
     }
 
 
-
-
-
     return <div className="App-header">
         <h1>Practice :: Cancelled Api </h1>
-        <Input.Search loading={isLoading} onChange={(e) => SearchLocationList(e)} style={{ margin: '10px 0px' }} size='large' />
+        <Input.Search
+            onKeyUp={(e) => {
+                if (isLoading) {
+                    queryClient.cancelQueries('search')
+                }
+                refetch()
+            }}
+            enterButton
+            loading={isLoading}
+            onChange={(e) => SearchLocationList(e)}
+            style={{ margin: '10px 0px' }} size='large' />
         <div className="list-box-warp">
             {isEmpty(data) && <span>No data</span>}
             {data?.map((item: DataType) => {

@@ -34,3 +34,9 @@ code {
   height: 20px;
   margin-right: 8px;
 }
+.dot {
+  background-color: greenyellow;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
