@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer"
 import { useFetchInfiniteScroll } from "../../api/services/hook-infiniteScroll"
 import Cardcommon from "../common/card"
 
-const InfiniteQuelyPractice = () => {
+const InfiniteQuelyPractice: React.FC = () => {
     const limit = 3
     const { ref, inView } = useInView()
     const { data, isFetchingNextPage, hasNextPage, refetch, fetchNextPage } = useFetchInfiniteScroll(limit)
@@ -15,8 +15,7 @@ const InfiniteQuelyPractice = () => {
     }, [fetchNextPage, inView, isFetchingNextPage])
 
 
-    return (<div className="App-header">
-        <h1>Practice :: InfiniteQuely </h1>
+    return (<div>
         {data?.pages?.map((page, idx) => (
             <div className="list-box" key={`master-${idx}`} >
                 {page?.map((item: any) => (

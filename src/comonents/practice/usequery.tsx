@@ -1,12 +1,11 @@
 import { useFetchLocationList } from "../../api/services/hook-usequery"
 import { DataType } from "../../interfaces/dataInterface"
 
-const UseQueryPractice = () => {
+const UseQueryPractice: React.FC = () => {
     const { data } = useFetchLocationList()
-    console.log(data)
 
-    return <div className="App-header">
-        <h1>Practice :: useQuery </h1>
+
+    return <div >
         {data?.map((item: DataType) => {
             return <div key={item.id}>{item.title}</div>
         })}

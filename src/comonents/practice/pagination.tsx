@@ -11,7 +11,7 @@ const initialState = {
 }
 
 
-const PaginationPractice = () => {
+const PaginationPractice: React.FC = () => {
     const [pagination, setPagination] = useState(initialState.pagination)
     const { data: dataPagination } = useFetchLocationPagination(pagination.limit, pagination.page)
 
@@ -25,8 +25,7 @@ const PaginationPractice = () => {
         })
     }
 
-    return <div className="App-header">
-        <h1>Practice :: Pagination </h1>
+    return <div >
         {
             dataPagination?.list?.map((item: DataType, idx: number) => {
                 return <div key={item.id}>

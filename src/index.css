@@ -40,3 +40,10 @@ code {
   height: 10px;
   border-radius: 50%;
 }
+.ant-layout {
+  min-height: 100vh;
+}
+
+.title-course {
+  font-size: 40px;
+}

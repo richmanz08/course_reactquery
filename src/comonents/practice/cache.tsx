@@ -1,12 +1,12 @@
 import { Button, Col, Row } from "antd"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useQueryClient } from "react-query"
 import { useFetchLocationByIDandCaching, useFetchLocationListandCaching } from "../../api/services/hook-caching"
 import Cardcommon from "../common/card"
 import Listcommon from "../common/list"
 
 
-const CachePractice = () => {
+const CachePractice: React.FC = () => {
     const queryClient = useQueryClient()
     const [selected, setSelected] = useState(0)
     const { data: ListData } = useFetchLocationListandCaching()
@@ -25,8 +25,7 @@ const CachePractice = () => {
 
     }, [ListData, selected])
 
-    return <div className="App-header">
-        <h1>Practice :: Caching data </h1>
+    return <div>
         <Row gutter={22}>
             <Col span={6} >
                 {ListData && <Listcommon list={ListData} onSelect={onSelect} selected={selected} />}

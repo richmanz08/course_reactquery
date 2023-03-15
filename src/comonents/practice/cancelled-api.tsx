@@ -1,12 +1,12 @@
 import { Input, } from "antd"
 import { isEmpty } from "lodash"
-import { useState } from "react"
+import React, { useState } from "react"
 import { useQueryClient } from "react-query"
 import { useFetchCancelled } from "../../api/services/hook-cancelled"
 import { DataType } from "../../interfaces/dataInterface"
 import Tagcommon from "../common/tag"
 
-const CancelledApiPractice = () => {
+const CancelledApiPractice: React.FC = () => {
     const [search, setSearch] = useState('')
     const { data, isLoading, refetch } = useFetchCancelled(search)
     const queryClient = useQueryClient()
@@ -22,8 +22,7 @@ const CancelledApiPractice = () => {
     }
 
 
-    return <div className="App-header">
-        <h1>Practice :: Cancelled Api </h1>
+    return <div >
         <Input.Search
             onKeyUp={(e) => {
                 if (isLoading) {

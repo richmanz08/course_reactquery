@@ -3,7 +3,7 @@ import { useFetchLocationList } from "../../api/services/hook-usequery"
 import { DataType } from "../../interfaces/dataInterface"
 import { Alert, Button, Form, Input, Row, Spin } from "antd"
 
-const InvalidatePractice = () => {
+const InvalidatePractice: React.FC = () => {
     const { data } = useFetchLocationList()
     const { mutateAsync, isLoading: isUpdate } = useCreateLocationInvalidate()
 
@@ -26,10 +26,9 @@ const InvalidatePractice = () => {
 
 
     }
-    // console.log(isAddLoad);
 
-    return <div className="App-header">
-        <h1>Practice :: Invalidate </h1>
+
+    return <div >
         <Row>
             <Form onFinish={onFinish} layout="vertical">
                 <Form.Item name="title" label={<h2 style={{ color: '#fff' }}>title</h2>} >

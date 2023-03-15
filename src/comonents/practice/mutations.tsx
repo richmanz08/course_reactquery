@@ -3,7 +3,7 @@ import { useCreateLocation } from "../../api/services/hook-mutations"
 import { useFetchLocationList } from "../../api/services/hook-usequery"
 import { DataType } from "../../interfaces/dataInterface"
 
-const MutationsPractice = () => {
+const MutationsPractice: React.FC = () => {
 
     const { data } = useFetchLocationList()
     const { mutate } = useCreateLocation()
@@ -28,8 +28,7 @@ const MutationsPractice = () => {
     }
 
 
-    return <div className="App-header">
-        <h1>Practice :: Mutations </h1>
+    return <div >
         <Row>
             <Form onFinish={onFinish} layout="vertical">
                 <Form.Item name="title" label={<h2 style={{ color: '#fff' }}>title</h2>} >
