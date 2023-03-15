@@ -22,7 +22,7 @@ const CancelledApiPractice: React.FC = () => {
     }
 
 
-    return <div >
+    return <div className="container-justify" >
         <Input.Search
             onKeyUp={(e) => {
                 if (isLoading) {

@@ -10,7 +10,7 @@ const Tagcommon = (props: PropsType) => {
 
 
     return (
-        < Tag style={{ color: 'white', fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+        < Tag style={{ fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
             {item.img_url ?
                 <img className="img-tag" src={item.img_url} alt="" /> : <></>
             }<h4> {item.title}</h4>

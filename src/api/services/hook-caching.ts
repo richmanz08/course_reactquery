@@ -16,7 +16,7 @@ export const useFetchLocationByIDandCaching = (id: number) => {
     return method
 }
 export const useFetchLocationListandCaching = () => {
-    const method = useQuery(['location-list'], async () => {
+    const method = useQuery(['location-list-caching'], async () => {
         const res = await clientAPI.get('location',);
         return res.data.map((item: DataType) => {
             return {

@@ -22,7 +22,7 @@ const Listcommon: React.FC<PropsType> = ({ list, onSelect, selected }) => {
                     <List.Item.Meta
                         avatar={<Avatar src={`https://joesch.moe/api/v1/random?key=${index}`} />}
                         title={<Row style={{
-                            color: selected === item.id ? 'blue' : 'white',
+                            color: selected === item.id ? 'blue' : 'black',
                         }} >
                             {item.title}
                             <div className={cache && 'dot'} />

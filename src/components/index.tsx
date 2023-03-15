@@ -1,7 +1,12 @@
 import React from 'react';
-import { StarOutlined, FolderOutlined, ReloadOutlined, ApiOutlined, StopOutlined, OrderedListOutlined, HourglassOutlined } from '@ant-design/icons';
+import {
+    StarOutlined,
+    FolderOutlined, ReloadOutlined,
+    ApiOutlined, StopOutlined,
+    OrderedListOutlined, HourglassOutlined
+} from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import UseQueryPractice from './practice/usequery';
 import PaginationPractice from './practice/pagination';
 import CachePractice from './practice/cache';
@@ -14,37 +19,15 @@ import { useNavigate } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
 export const HomePage = () => {
+    const location = useLocation()
+
+
     const navigate = useNavigate()
     const {
         token: { colorBgContainer },
     } = theme.useToken();
-    // return <div className="App">
-    //     <header className="App-header">
-    //         <img src={logo} className="App-logo" alt="logo" />
-    //         <p>
-    //             React query Course + Openapi
-    //         </p>
-    //         <a
-    //             className="App-link"
-    //             href="https://reactjs.org"
-    //             target="_blank"
-    //             rel="noopener noreferrer"
-    //         >
-    //             Let get started
-    //         </a>
-    //         <ul>
-    //             <li onClick={() => navigate('/usequery')}>React useQuery</li>
-    //             <li onClick={() => navigate('/mutation')}>Mutation</li>
-    //             <li onClick={() => navigate('/cache')}>Caching Data</li>
-    //             <li onClick={() => navigate('/invalidate')}>Invalidate</li>
-    //             <li onClick={() => navigate('/handle/1')}>Handle API</li>
-    //             <li onClick={() => navigate('/cancelled')}>Cancelled API</li>
-    //             <li onClick={() => navigate('/pagination')}>Pagination keep previous data</li>
-    //             <li onClick={() => navigate('/infinite-scroll')}>Infinite Scroll</li>
-    //         </ul>
-    //     </header>
 
-    // </div>
+
 
     const menuItems = [{
         key: '1',
@@ -64,7 +47,7 @@ export const HomePage = () => {
     }, {
         key: '4',
         icon: ReloadOutlined,
-        label: 'Invalidate',
+        label: 'Invalidate & refetch',
         path: '/invalidate'
     }, {
         key: '5',
@@ -87,24 +70,20 @@ export const HomePage = () => {
         label: 'EX: Infinite Scroll',
         path: '/infinite-scroll'
     }]
+    const tab = menuItems.find((menu) => menu.path.includes(location.pathname))
+
     return <Layout>
         <Sider
             breakpoint="lg"
             collapsedWidth="0"
             width={250}
+
         >
             <div className="logo" />
             <Menu
                 theme="dark"
                 mode="inline"
-                // defaultSelectedKeys={['4']}
-                // items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-                //     (icon, index) => ({
-                //         key: String(index + 1),
-                //         icon: React.createElement(icon),
-                //         label: `nav ${index + 1}`,
-                //     }),
-                // )}
+                defaultSelectedKeys={[tab?.key || '1']}
                 items={menuItems.map((item) => ({
                     key: item.key,
                     icon: React.createElement(item.icon),
@@ -112,15 +91,12 @@ export const HomePage = () => {
 
                 }))}
                 onClick={(e) => {
-                    console.log(e)
                     const nextPage = menuItems.find((f) => f.key === e.key)
                     navigate(`${nextPage?.path}`)
-                    console.log(nextPage)
                 }
 
 
                 }
-            // style={{ minWidth: 400 }}
             />
         </Sider>
         <Layout>
@@ -128,7 +104,7 @@ export const HomePage = () => {
                 <span className='title-course'> <img style={{ width: 40, height: 40, marginRight: 16 }} src='https://react-query-v3.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg' alt='n' />React Query Course</span>
             </Header>
             <Content style={{ margin: '24px 16px 0' }}>
-                <div style={{ padding: 24, minHeight: 360, background: '#e4e5e6' }}>
+                <div style={{ padding: 24, minHeight: 360 }}>
                     <Routes>
                         <Route path="/" element={<UseQueryPractice />} />
                         <Route path="/usequery" element={<UseQueryPractice />} />

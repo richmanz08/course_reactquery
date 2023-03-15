@@ -1,6 +1,6 @@
 
 import { useQuery, } from 'react-query';
-import { NotificationType } from '../../comonents/practice/handle-api';
+import { NotificationType } from '../../components/practice/handle-api';
 import { clientAPI } from "../setting"
 
 

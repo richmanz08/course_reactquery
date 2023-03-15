@@ -38,7 +38,7 @@ const HandlePractice: React.FC = () => {
         isLoading } = useFetchLocationByID(Number(params.id), openNotificationWithIcon)
 
 
-    return <div >
+    return <div className="container-justify" >
         {contextHolder}
         <h1>Practice :: Handle onSuccess vs onError vs onSettled</h1>
         {isLoading && <Spin size="large" />}

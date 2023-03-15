@@ -25,7 +25,7 @@ const CachePractice: React.FC = () => {
 
     }, [ListData, selected])
 
-    return <div>
+    return <div className="container-justify">
         <Row gutter={22}>
             <Col span={6} >
                 {ListData && <Listcommon list={ListData} onSelect={onSelect} selected={selected} />}

@@ -5,7 +5,7 @@ const UseQueryPractice: React.FC = () => {
     const { data } = useFetchLocationList()
 
 
-    return <div >
+    return <div className="container-justify" >
         {data?.map((item: DataType) => {
             return <div key={item.id}>{item.title}</div>
         })}

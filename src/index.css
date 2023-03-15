@@ -11,14 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.container-justify {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: aqua; */
+}
 .list-box {
-  background-color: rgba(90, 88, 85, 0.363);
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+    align-items: center;
   margin-left: 16px;
   grid-gap: 34px;
+  width: 100%;
   margin-top: 8px;
 }
 
@@ -46,4 +53,8 @@ code {
 
 .title-course {
   font-size: 40px;
+}
+.title-label {
+  font-size: 22px;
+  color: #000;
 }

@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import './App.css';
 import { QueryClientProvider, QueryClient } from 'react-query'
-import { HomePage } from './comonents';
+import { HomePage } from './components';
 import { ReactQueryDevtools } from "react-query/devtools";
 
 const queryClient = new QueryClient({

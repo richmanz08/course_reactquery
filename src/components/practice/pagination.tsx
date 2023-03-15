@@ -25,7 +25,7 @@ const PaginationPractice: React.FC = () => {
         })
     }
 
-    return <div >
+    return <div className="container-justify" >
         {
             dataPagination?.list?.map((item: DataType, idx: number) => {
                 return <div key={item.id}>

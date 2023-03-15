@@ -1,7 +1,8 @@
 import { useCreateLocationInvalidate } from "../../api/services/hook-invalidate"
 import { useFetchLocationList } from "../../api/services/hook-usequery"
 import { DataType } from "../../interfaces/dataInterface"
-import { Alert, Button, Form, Input, Row, Spin } from "antd"
+import { Button, Col, Form, Input, Row, Spin } from "antd"
+import Tagcommon from "../common/tag"
 
 const InvalidatePractice: React.FC = () => {
     const { data } = useFetchLocationList()
@@ -28,27 +29,31 @@ const InvalidatePractice: React.FC = () => {
     }
 
 
-    return <div >
-        <Row>
-            <Form onFinish={onFinish} layout="vertical">
-                <Form.Item name="title" label={<h2 style={{ color: '#fff' }}>title</h2>} >
+    return <div className="container-justify" >
+        <Row gutter={22}>
+            <Col span={12}>     <Form onFinish={onFinish} layout="vertical">
+                <Form.Item name="title" label={<h2>title</h2>} >
                     <Input placeholder="Title" />
                 </Form.Item>
-                <Form.Item name="img_url" label={<h2 style={{ color: '#fff' }}>Image URL</h2>}>
+                <Form.Item name="img_url" label={<h2>Image URL</h2>}>
                     <Input.TextArea placeholder="Image URL" />
                 </Form.Item>
-                <Form.Item name="description" label={<h2 style={{ color: '#fff' }}>description</h2>}>
+                <Form.Item name="description" label={<h2>description</h2>}>
                     <Input.TextArea placeholder="description" />
                 </Form.Item>
                 <Button type="primary" htmlType="submit" >Create</Button>
-            </Form>
-            <Spin tip="Loading" size="large" spinning={isUpdate} >
-                <div className="list-box">
-                    {data?.map((item: DataType) => {
-                        return <Alert message={item.title} type="success" closable />
-                    })}
-                </div>
-            </Spin>
+            </Form></Col>
+            <Col span={12}>
+                <Spin tip="Loading" size="large" spinning={isUpdate} >
+                    <div >
+                        {data?.map((item: DataType) => {
+                            return <Tagcommon key={item.id} item={item} />
+                        })}
+                    </div>
+                </Spin>
+            </Col>
+
+
         </Row>
     </div>
 }

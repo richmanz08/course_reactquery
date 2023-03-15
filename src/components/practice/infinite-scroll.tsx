@@ -15,11 +15,11 @@ const InfiniteQuelyPractice: React.FC = () => {
     }, [fetchNextPage, inView, isFetchingNextPage])
 
 
-    return (<div>
+    return (<div className="container-justify">
         {data?.pages?.map((page, idx) => (
             <div className="list-box" key={`master-${idx}`} >
                 {page?.map((item: any) => (
-                    <Cardcommon item={item} />
+                    <Cardcommon key={item.id} item={item} />
                 ))}
             </div>
         ))}
