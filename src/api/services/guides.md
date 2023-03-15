@@ -60,6 +60,11 @@ code => await queryClient.refetchQueries(['key'])
 code => await queryClient.refetchQueries(['key',id])
 ::: ระบบจะทำการ fetch query ที่เชื่อมต่ออยู่ จาก key แบบเจาะจง 
 
+
+## ข้อแตกต่างระหว่าง refetchQueries() vs invalidateQueries()
+::: refetchQueries นั้นจะทำการเรียกข้อมูลนั้นใหม่ โดยไม่สนว่าใช้งานอยู่หรือไม่
+::: invalidateQueries นั้นจะทำการเรียกข้อมูลนั้นใหม่ เมื่อมีการใช้งานข้อมูลนั้นๆอยู่เท่านั้น
+
 ## Refetch Data 
 code => const {...,refetch} = func()  
 ::: ระบบจะทำการเรียก api เส้นนั้นๆใหม่อีกครั้ง โดยจะยึดตาม องค์ประกอบก่อนหน้า(params or query string)

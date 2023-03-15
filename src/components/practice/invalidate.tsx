@@ -1,11 +1,11 @@
-import { useCreateLocationInvalidate } from "../../api/services/hook-invalidate"
-import { useFetchLocationList } from "../../api/services/hook-usequery"
+import { useCreateLocationInvalidate, useFetchLocationListInvalidate } from "../../api/services/hook-invalidate"
 import { DataType } from "../../interfaces/dataInterface"
 import { Button, Col, Form, Input, Row, Spin } from "antd"
 import Tagcommon from "../common/tag"
 
+
 const InvalidatePractice: React.FC = () => {
-    const { data } = useFetchLocationList()
+    const { data } = useFetchLocationListInvalidate()
     const { mutateAsync, isLoading: isUpdate } = useCreateLocationInvalidate()
 
 
@@ -29,6 +29,8 @@ const InvalidatePractice: React.FC = () => {
     }
 
 
+
+
     return <div className="container-justify" >
         <Row gutter={22}>
             <Col span={12}>     <Form onFinish={onFinish} layout="vertical">
@@ -42,6 +44,7 @@ const InvalidatePractice: React.FC = () => {
                     <Input.TextArea placeholder="description" />
                 </Form.Item>
                 <Button type="primary" htmlType="submit" >Create</Button>
+
             </Form></Col>
             <Col span={12}>
                 <Spin tip="Loading" size="large" spinning={isUpdate} >

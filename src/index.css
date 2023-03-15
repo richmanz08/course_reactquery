@@ -11,12 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container-justify {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: aqua; */
-}
+
 .list-box {
   padding: 20px;
   display: flex;

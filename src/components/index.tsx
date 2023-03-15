@@ -16,6 +16,7 @@ import CancelledApiPractice from './practice/cancelled-api';
 import HandlePractice from './practice/handle-api';
 import InfiniteQuelyPractice from './practice/infinite-scroll';
 import { useNavigate } from 'react-router-dom';
+import InvalidateVsRefetchPractice from './practice/invalidateVsrefetch';
 
 const { Header, Content, Footer, Sider } = Layout;
 export const HomePage = () => {
@@ -44,28 +45,34 @@ export const HomePage = () => {
         icon: FolderOutlined,
         label: 'Caching Data',
         path: '/cache'
-    }, {
+        },
+        {
         key: '4',
         icon: ReloadOutlined,
-        label: 'Invalidate & refetch',
-        path: '/invalidate'
-    }, {
-        key: '5',
+            label: 'Invalidate',
+            path: '/invalidate'
+        }, {
+            key: '5',
+            icon: ReloadOutlined,
+            label: 'Invalidate VS Refetch',
+            path: '/invalidate-vs-refetch'
+        }, {
+            key: '6',
         icon: ApiOutlined,
         label: 'Handle API',
         path: '/handle/1'
     }, {
-        key: '6',
+            key: '7',
         icon: StopOutlined,
         label: 'EX: Cancelled API',
         path: '/cancelled'
     }, {
-        key: '7',
+            key: '8',
         icon: OrderedListOutlined,
         label: 'EX: Pagination Query',
         path: '/pagination'
     }, {
-        key: '8',
+            key: '9',
         icon: HourglassOutlined,
         label: 'EX: Infinite Scroll',
         path: '/infinite-scroll'
@@ -112,6 +119,7 @@ export const HomePage = () => {
                         <Route path="/cache" element={<CachePractice />} />
                         <Route path="/mutation" element={<MutationsPractice />} />
                         <Route path="/invalidate" element={<InvalidatePractice />} />
+                        <Route path='/invalidate-vs-refetch' element={<InvalidateVsRefetchPractice />} />
                         <Route path="/cancelled" element={<CancelledApiPractice />} />
                         <Route path="/handle/:id" element={<HandlePractice />} />
                         <Route path="/infinite-scroll" element={<InfiniteQuelyPractice />} />

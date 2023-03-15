@@ -8,3 +8,18 @@ export const useFetchLocationList = () => {
     })
     return method
 }
+
+
+
+export const getDataLocationList = async () => {
+
+    return await clientAPI
+        .get('location').then((response) => {
+            console.log(response)
+
+            return response
+        }).catch((error) => {
+            return error
+        })
+
+}
