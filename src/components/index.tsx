@@ -109,6 +109,7 @@ export const HomePage = () => {
         <Layout>
             <Header style={{ padding: 0, background: colorBgContainer, display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
                 <span className='title-course'> <img style={{ width: 40, height: 40, marginRight: 16 }} src='https://react-query-v3.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg' alt='n' />React Query Course</span>
+                <span className='title-label-header'>| {tab?.label}</span>
             </Header>
             <Content style={{ margin: '24px 16px 0' }}>
                 <div style={{ padding: 24, minHeight: 360 }}>

@@ -53,3 +53,10 @@ code {
   font-size: 22px;
   color: #000;
 }
+.title-label-header {
+  margin-left: 16px;
+  color: #127ec3;
+  font-size: 25px;
+  font-weight: 700;
+
+}

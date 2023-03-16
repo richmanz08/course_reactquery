@@ -6,7 +6,7 @@ import Cardcommon from "../common/card"
 const InfiniteQuelyPractice: React.FC = () => {
     const limit = 3
     const { ref, inView } = useInView()
-    const { data, isFetchingNextPage, hasNextPage, refetch, fetchNextPage } = useFetchInfiniteScroll(limit)
+    const { data, isFetchingNextPage, hasNextPage, fetchNextPage } = useFetchInfiniteScroll(limit)
 
     React.useEffect(() => {
         if (inView && !isFetchingNextPage) {
@@ -23,9 +23,8 @@ const InfiniteQuelyPractice: React.FC = () => {
                 ))}
             </div>
         ))}
-        {!hasNextPage && <span style={{ color: 'red', cursor: 'pointer' }}
-            onClick={() => refetch()
-            } >No more to load and click to refresh</span>}
+        {!hasNextPage && <span style={{ color: 'red', cursor: 'pointer', textAlign: 'center' }}
+        >No more to load </span>}
         {isFetchingNextPage
             ? <span >Loading ...</span>
             : null}
