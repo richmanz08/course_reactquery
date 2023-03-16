@@ -6,8 +6,8 @@ export const useFetchCancelled = (search: string) => {
         const res = await clientAPI.get(`location?title_like=${search}`, { signal });
         return res.data;
     }, {
-        // staleTime: 500,
-        cacheTime: 2000
+        staleTime: 5000,
+        cacheTime: 10000
     })
     return method
 }

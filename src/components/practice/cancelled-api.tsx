@@ -1,6 +1,6 @@
 import { Input, } from "antd"
 import { isEmpty } from "lodash"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useQueryClient } from "react-query"
 import { useFetchCancelled } from "../../api/services/hook-cancelled"
 import { DataType } from "../../interfaces/dataInterface"
@@ -20,6 +20,13 @@ const CancelledApiPractice: React.FC = () => {
         }
         setSearch(value)
     }
+
+
+    useEffect(() => {
+        return () => {
+            queryClient.cancelQueries('search')
+        }
+    }, [queryClient])
 
 
     return <div className="container-justify" >
